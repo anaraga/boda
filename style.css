@@ -30,6 +30,63 @@
     --divider-margin: 7vh;
 
     --content-width: 45vw;
+
+    --main-overflow: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.popup-form {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background: var(--bg-color);
+}
+
+.popup-form .close {
+    position: fixed;
+    right: 0;
+
+    height: 50px;
+    width: 50px;
+    margin: 10px 15px;
+
+    background-color: rgba(76, 85, 102, 0.15);
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.popup-header .close {
+    fill: var(--main-color)
+}
+
+
+
+button {
+    all: unset;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #0445AF;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 0 33px;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
 }
 
 body {
@@ -42,6 +99,7 @@ body {
 
     background-color: var(--bg-color);
     overflow-x: hidden;
+    overflow-y: var(--main-overflow);
 }
 
 b {
@@ -150,7 +208,7 @@ nav ul li a:hover {
 
 
 ul.list {
-    text-align: center;    
+    text-align: center;
 }
 
 
